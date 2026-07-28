@@ -1,0 +1,26 @@
+# Core data science
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+
+# Machine learning
+scikit-learn>=1.4
+xgboost>=2.0
+imbalanced-learn>=0.12
+shap>=0.45
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
+
+# Interactive app
+streamlit>=1.32
+
+# Notebook execution
+jupyter>=1.0
+nbformat>=5.10
+ipykernel>=6.29
+
+# Model persistence
+joblib>=1.3
