@@ -45,9 +45,9 @@ The screenshots below are from the deployed Streamlit app (`app/streamlit_app.py
 
 ### Portfolio Dashboard
 
-![Portfolio-level fraud risk dashboard showing transactions scored, flagged for review, fraud caught, risk score distribution, and risk tier breakdown](Screenshot_2026-07-28_224634.png)
+![Portfolio-level fraud risk dashboard showing transactions scored, flagged for review, fraud caught, risk score distribution, and risk tier breakdown](Screenshot1.png)
 
-![Highest-risk transactions table and daily flagged-transaction volume trend](Screenshot_2026-07-28_225012.png)
+![Highest-risk transactions table and daily flagged-transaction volume trend](Screenshot2.png)
 
 The dashboard scores the **entire 50,000-transaction portfolio** live and surfaces the highest-risk items for review, with a full drill-down into which fraud scheme each flagged transaction resembles and a daily trend of flagging volume.
 
@@ -55,7 +55,7 @@ The dashboard scores the **entire 50,000-transaction portfolio** live and surfac
 
 ### Real-Time Single-Transaction Scoring
 
-![Real-time transaction risk scoring form with fields for amount, vendor age, approvals, GL account, and red-flag checkboxes](Screenshot_2026-07-28_225257.png)
+![Real-time transaction risk scoring form with fields for amount, vendor age, approvals, GL account, and red-flag checkboxes](Screenshot3.png)
 
 This is the interactive equivalent of the paper's "real-time detection" claim: enter a transaction's characteristics and get a live risk score, tier, and a SHAP-based explanation of exactly which features drove the score the same explanation format an auditor would attach to a work paper.
 
