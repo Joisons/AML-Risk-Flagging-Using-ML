@@ -45,13 +45,13 @@ The screenshots below are from the deployed Streamlit app (`app/streamlit_app.py
 
 ### Portfolio Dashboard
 
-![Portfolio-level fraud risk dashboard showing transactions scored, flagged for review, fraud caught, risk score distribution, and risk tier breakdown](Screenshot_2026-07-28_224634.png)
+![Portfolio-level fraud risk dashboard showing transactions scored, flagged for review, fraud caught, risk score distribution, and risk tier breakdown](Screenshot 2026-07-28 224634.png)
 
 ![Highest-risk transactions table and daily flagged-transaction volume trend](Screenshot_2026-07-28_225012.png)
 
 The dashboard scores the **entire 50,000-transaction portfolio** live and surfaces the highest-risk items for review, with a full drill-down into which fraud scheme each flagged transaction resembles and a daily trend of flagging volume.
 
-> **Note on the recall figure shown in the dashboard (99.2%):** this is computed by scoring the *entire* dataset, including the transactions the models were trained on, and is shown here as a live demonstration of the scoring engine rather than as a performance claim. The number to cite for actual model performance is the held-out test-set recall reported in **Results** above (96.8%, on 12,500 transactions the model never trained on) — scoring data a model was trained on will always look better than scoring genuinely unseen data, which is precisely why the notebook's own evaluation (§6–§9) is done exclusively on the held-out split.
+> **Note on the recall figure shown in the dashboard (99.2%):** this is computed by scoring the *entire* dataset, including the transactions the models were trained on, and is shown here as a live demonstration of the scoring engine rather than as a performance claim. The number to cite for actual model performance is the held-out test-set recall reported in **Results** above (96.8%, on 12,500 transactions the model never trained on) scoring data a model was trained on will always look better than scoring genuinely unseen data, which is precisely why the notebook's own evaluation (§6–§9) is done exclusively on the held-out split.
 
 ### Real-Time Single-Transaction Scoring
 
