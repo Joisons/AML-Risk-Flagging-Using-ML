@@ -45,7 +45,7 @@ The screenshots below are from the deployed Streamlit app (`app/streamlit_app.py
 
 ### Portfolio Dashboard
 
-![Portfolio-level fraud risk dashboard showing transactions scored, flagged for review, fraud caught, risk score distribution, and risk tier breakdown](Screenshot 2026-07-28 224634.png)
+![Portfolio-level fraud risk dashboard showing transactions scored, flagged for review, fraud caught, risk score distribution, and risk tier breakdown](Screenshot_2026-07-28_224634.png)
 
 ![Highest-risk transactions table and daily flagged-transaction volume trend](Screenshot_2026-07-28_225012.png)
 
