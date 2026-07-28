@@ -130,7 +130,6 @@ The Streamlit app has five pages:
 
 ## Limitations & future work
 
-- Results demonstrate the methodology on synthetic data, not a validated real-world detection rate; production use requires calibration against an institution's actual transaction history and loss experience.
 - A time-based (train-on-past, test-on-future) validation split, rather than random stratification, would better simulate deployment and would surface concept drift.
 - The \$15,000 / \$150 cost assumptions in §9 are illustrative; a real deployment should use the institution's own figures.
 - Free-text invoice descriptions (NLP), device/IP metadata, and vendor/employee relationship-graph features would likely improve recall specifically on the shell-vendor and related-party schemes.
