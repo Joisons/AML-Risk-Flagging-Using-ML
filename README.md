@@ -39,6 +39,26 @@ At the cost-minimising decision threshold (0.27, selected by minimising expected
 
 **Why ROC-AUC is not the headline number:** all three models post ROC-AUC above 0.98, which looks reassuring but is a known artefact of severe class imbalance (98.5% legitimate) the false-positive *rate* stays small even when the absolute count of false positives is large enough to overwhelm a review team. PR-AUC does not benefit from that denominator effect and is reported first for that reason. This distinction and the decision to select a threshold by expected cost rather than a default 0.5 cutoff is itself part of what the notebook is trying to demonstrate: audit-usable ML requires audit-relevant evaluation, not just a high benchmark score.
 
+## Live Demo
+
+The screenshots below are from the deployed Streamlit app (`app/streamlit_app.py`), not mockups.
+
+### Portfolio Dashboard
+
+![Portfolio-level fraud risk dashboard showing transactions scored, flagged for review, fraud caught, risk score distribution, and risk tier breakdown](Screenshot_2026-07-28_224634.png)
+
+![Highest-risk transactions table and daily flagged-transaction volume trend](Screenshot_2026-07-28_225012.png)
+
+The dashboard scores the **entire 50,000-transaction portfolio** live and surfaces the highest-risk items for review, with a full drill-down into which fraud scheme each flagged transaction resembles and a daily trend of flagging volume.
+
+> **Note on the recall figure shown in the dashboard (99.2%):** this is computed by scoring the *entire* dataset, including the transactions the models were trained on, and is shown here as a live demonstration of the scoring engine rather than as a performance claim. The number to cite for actual model performance is the held-out test-set recall reported in **Results** above (96.8%, on 12,500 transactions the model never trained on) — scoring data a model was trained on will always look better than scoring genuinely unseen data, which is precisely why the notebook's own evaluation (§6–§9) is done exclusively on the held-out split.
+
+### Real-Time Single-Transaction Scoring
+
+![Real-time transaction risk scoring form with fields for amount, vendor age, approvals, GL account, and red-flag checkboxes](Screenshot_2026-07-28_225257.png)
+
+This is the interactive equivalent of the paper's "real-time detection" claim: enter a transaction's characteristics and get a live risk score, tier, and a SHAP-based explanation of exactly which features drove the score the same explanation format an auditor would attach to a work paper.
+
 ## A note on the data
 
 Real, labeled forensic-accounting engagement data is essentially never publicly releasable client confidentiality and active-engagement restrictions make that so by design. Public benchmark datasets such as the ULB Credit Card Fraud dataset and IEEE-CIS are anonymised, PCA-transformed *consumer payment* data (features named `V1` ... `V28`) with no auditable meaning. They're useful for benchmarking raw classifier performance, but cannot demonstrate an *audit-risk* methodology at all an auditor cannot write a work paper that says "`V17 < -3.4`."
